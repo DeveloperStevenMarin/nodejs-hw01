@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { v4: uuidv4 } = require('uuid');
 
 const contactsPath = path.join(__dirname, '..', 'db', 'contacts.json');
 
@@ -39,8 +40,9 @@ function removeContact(contactId) {
 
 // Función para agregar un nuevo contacto
 function addContact(name, email, phone) {
+  const id = uuidv4();
   const newContact = {
-    id: Date.now().toString(),
+    id: id,
     name,
     email,
     phone,

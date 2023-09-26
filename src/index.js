@@ -50,10 +50,3 @@ switch (command) {
     console.error('Unknown command. Use "--help" for available commands.');
 }
 
-// Resto de tu código de Express (rutas, servidor, etc.)
-
-// Inicia el servidor
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
